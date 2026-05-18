@@ -1,0 +1,28 @@
+hero_names = ["Layla", "Tigreal", "Gusion", "Kagura", "Chou"]
+hero_roles = ["Marksman", "Tank", "Assassin", "Mage", "Fighter"]
+
+ign = input("In-game name (IGN): ")
+rank = input("Current rank: ")
+
+print("\n==========================================")
+print("   MOBILE LEGENDS -- HERO ROSTER")
+print("==========================================")
+
+for i in range(len(hero_names)):
+    print(f" {i + 1}. {hero_names[i]:12} [{hero_roles[i]}]")
+
+print("==========================================")
+
+match_heroes = []
+match_kdas = []
+match_results = []
+match_tags = []
+
+wins = 0
+losses = 0
+
+for match in range(1, 5):
+
+    print(f"\n--- MATCH {match} ---")
+
+    hero_number = int(input("Hero number (0 to skip): "))
