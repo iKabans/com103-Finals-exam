@@ -85,7 +85,37 @@ if matches_played > 0:
         if match_kdas[i] > match_kdas[best_index]:
             best_index = i
 
-
 print("\n=============================================")
 print(f"     {ign} -- MATCH LOG ({rank})")
+print("=============================================")
+
+for i in range(matches_played):
+
+    
+    if match_results[i] == "W":
+        result_text = "WIN"
+    else:
+        result_text = "LOSS"
+
+    print(
+        f"[{i + 1}] "
+        f"{match_heroes[i]:12} | "
+        f"KDA: {match_kdas[i]:5.2f} | "
+        f"{result_text:4} | "
+        f"{match_tags[i]}"
+    )
+
+print("---------------------------------------------")
+print(f"Matches Played : {matches_played}")
+print(f"Wins : {wins}  |  Losses : {losses}")
+print(f"Win Rate       : {win_rate}%")
+
+if matches_played > 0:
+    print(
+        f"Best Match     : "
+        f"[{best_index + 1}] "
+        f"{match_heroes[best_index]} "
+        f"(KDA: {match_kdas[best_index]:.2f})"
+    )
+
 print("=============================================")
